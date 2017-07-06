@@ -1,4 +1,6 @@
 sefl-educational project - setting up wordpress using ansible
+
+
 how to use:
 1. Clone repo to some dir
 2. Vagrant up
