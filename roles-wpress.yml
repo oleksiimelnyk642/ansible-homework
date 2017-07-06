@@ -1,0 +1,11 @@
+---
+- name: Install wpress with roles playbook
+  hosts: ubuntuhost
+  
+  roles:
+    - common
+    - apache2
+    - mysql
+    - php
+    - wpress
+

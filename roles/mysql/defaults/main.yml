@@ -1,0 +1,4 @@
+---
+wp_mysql_db: wpress_db
+wp_mysql_user: admin
+wp_mysql_password: admin

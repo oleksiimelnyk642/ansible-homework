@@ -1,0 +1,11 @@
+---
+# tasks
+
+- name: create wpress db
+  mysql_db: name={{ wp_mysql_db }} state=present
+
+- name: create mysql user
+  mysql_user:
+    name={{ wp_mysql_user }}
+    password={{ wp_mysql_password }}
+    priv=*.*:ALL

@@ -1,0 +1,11 @@
+---
+# tasks
+
+- name: set ServerName for apache
+  shell: sed 's/\bServerName\b/& 192.168.11.12/' /etc/apache2/apache2.conf
+  notify: Restart apache2
+
+- name: Rewrite mod enable
+  become: true
+  shell: a2enmod rewrite
+  notify: Restart apache2

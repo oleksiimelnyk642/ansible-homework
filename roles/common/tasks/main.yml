@@ -1,0 +1,16 @@
+---
+# tasks
+
+#- name: update packages
+#  become: true
+#  command: apt-get update
+
+- name: update packages
+  apt: >
+    upgrade=yes
+    update_cache=yes
+    cache_valid_time=3600
+
+- name: Install packages
+  apt: name={{ item }} state=installed
+  with_items: "{{ install_packages }}"
